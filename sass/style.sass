@@ -1,3 +1,10 @@
+$color_blue: #1eacc7
+$color_pink: #ff5656
+
+=btn_hover
+    &:hover
+        background-image: none
+        background: $color_blue
 *
     font-family: 'Roboto', sans-serif
 
@@ -64,7 +71,7 @@ nav
         height: 46px
         box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
         border: 3px solid rgba(0, 0, 0, 0.07)
-        background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+        background-image: linear-gradient(to top, $color_blue 0%, #4ce2ff 100%)
         text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
         color: #ffffff
         border: none
@@ -76,6 +83,7 @@ nav
         text-align: center
         text-transform: uppercase
         border-radius: 4px
+        +btn_hover
 .promo
     min-height: 800px
     background: url('../img/bg/bg_main.png') center (center / cover) no-repeat
@@ -111,7 +119,7 @@ nav
         height: 63px
         box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12)
         border: 3px solid rgba(0, 0, 0, 0.07)
-        background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+        background-image: linear-gradient(to top, $color_blue 0%, #4ce2ff 100%)
         margin-top: 118px
         border: none
         border-radius: 4px
@@ -121,6 +129,7 @@ nav
         font-weight: 400
         text-align: center
         text-transform: uppercase
+        +btn_hover
 
 .label
     display: block
@@ -170,7 +179,7 @@ nav
         &_descr
             width: 342px
         &_subtitle
-            color: #1eacc7
+            color: $color_blue
             font-size: 17px
             font-weight: 400
             line-height: normal
@@ -184,7 +193,7 @@ nav
             width: 113px
             height: 113px
             border-radius: 100%
-            background-color: #1eacc7
+            background-color: $color_blue
             display: flex
             justify-content: center
             align-items: center
@@ -223,19 +232,26 @@ nav
             text-transform: uppercase
             text-align: center
         &_plus
-            display: flex
-            justify-content: center
-            align-items: center
-            position: absolute
-            bottom: 35px
-            left: 50%
-            transform: translateX(-50%)
-            width: 26px
-            height: 26px
-            background-color: #000000
-            margin: 0 auto
-            border-radius: 100%
-            cursor: pointer
+            
+                content: ''
+                display: block
+                width: 14px
+                height: 2px
+                background: $color_blue
+                transition: 0.3s all
+            &:after
+                content: ''
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                display: block
+                height: 14px
+                weight: 2px
+                background: $color_blue
+                transition: 0.3s all
+            &:hover
+                &:before, &:after
+                    background: $color_pink
 .choice
     min-height: 896px
     background: url('../img/bg/bg_choice.png') center (center/cover) no-repeat
@@ -260,7 +276,7 @@ nav
         // left: 50%
         // translateX: -50%
         // bottom: 49px
-        color: #1fbad6        
+        color: #1fbad6
         font-size: 15px
         font-weight: 400
         // text-align: center
@@ -270,6 +286,5 @@ footer
     .divider
         width: 300px
         height: 4px
-        background-color:#1fbad6
+        background-color: #1fbad6
         margin: 0 auto
-
