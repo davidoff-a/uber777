@@ -232,13 +232,12 @@ nav
             text-transform: uppercase
             text-align: center
         &_plus
-            
-                content: ''
-                display: block
-                width: 14px
-                height: 2px
-                background: $color_blue
-                transition: 0.3s all
+            content: ''
+            display: block
+            width: 14px
+            height: 2px
+            background: $color_blue
+            transition: 0.3s all
             &:after
                 content: ''
                 position: absolute
@@ -260,26 +259,64 @@ nav
         display: block
         margin: 0 auto
         margin-top: 56px
-.conditions
+
+.condition
     padding: 68px 0 84px 0
-    min-height: 919px
+    &_block
+        margin: 33px 0
+        .warning
+            .condition_title
+                color: $color_pink
+    &_nbm
+        margin-bottom: 0
+    &_title
+        color: $color_blue
+        font-size: 22px
+        font-weight: 400
+    &_text
+        font-size: 17px
+        font-weight 300
+        margin-top: 25px
+        line-height: 24px
+    &_list
+        list-style-type: none
+        padding-left: 50px
+        margin-top: 22px
+        li
+            font-size: 17px
+            font-weight: 300
+            line-height: 24px
+            margin-bottom 10px
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                left: -32px
+                top: 3px
+                width: 21px
+                height: 21px
+                background: url('../img/icons/done_blue.png') center (center/cover) no-repeat
+    .warning
+        .condition_title
+            color: $color_pink
+        .condition_list
+            li
+                &:before
+                    background: url('../img/icons/done_red.png') center (center/cover) no-repeat
 .whole_world
-    // position: relative
     padding: 48px 0
     background: url('../img/bg/bg_cities.png') center (center/cover) no-repeat
     height: 717px
+    position: relative
     .cities
         display: block
         margin-top: 0 auto
-        // text-align: center
-        // position: absolute
-        // left: 50%
-        // translateX: -50%
-        // bottom: 49px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
         color: #1fbad6
         font-size: 15px
         font-weight: 400
-        // text-align: center
         text-transform: uppercase
 footer
     padding: 14px 0 39px 0
@@ -288,3 +325,4 @@ footer
         height: 4px
         background-color: #1fbad6
         margin: 0 auto
+
