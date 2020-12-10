@@ -233,39 +233,41 @@ nav
             text-align: center
         &_plus
             display: flex
-            margin: 0 auto
-            height: 26px
-            width: 26px
-            border-radius: 100%
-            background: #000
-            padding: 6px
+            justify-content: center
+            align-items: center
             position: absolute
             bottom: 35px
             left: 50%
-            transform: translate(-50%)
-            &:before
+            transform: translateX(-50%)
+            width: 26px
+            height: 26px
+            background-color: #000000
+            margin: 0 auto
+            border-radius: 50%
+            cursor: pointer
+            &::before
                 content: ''
                 display: block
-                top: -50%
-                transform: translateY(50%)
                 width: 14px
                 height: 2px
-                background: $color_blue
-                
-            &:after
+                background-color: $color_blue
+            &::after
                 content: ''
                 position: absolute
-                left: 50%
-                transform: translateX(-50%)
                 display: block
-                height: 14px
                 width: 2px
-                background: $color_blue
-                transition: 0.3s all
+                height: 14px
+                background-color: $color_blue
+                right: 50%
+                transform: translateX(50%)
             &:hover
-                
-                &:before, &:after
-                    background: $color_pink
+                &::before, &::after
+                    background-color: $color-pink
+                    transition: all 0.3s
+
+
+
+
 .choice
     min-height: 896px
     background: url('../img/bg/bg_choice.png') center (center/cover) no-repeat
